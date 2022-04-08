@@ -1,0 +1,33 @@
+<!-- <p>products works!</p> -->
+<p>{{productList}}</p>
+<!-- <h1>prachi</h1> -->
+<div class="container mt-5 mb-5">
+
+  <div class="row">
+
+      <div class="col-lg-4" *ngFor="let object of productList">
+
+          <div class="typeproduct mt-3 mb-3">
+              <img src="{{object.productPicture}}">
+              <h1>{{object.productTitle}}</h1>
+              <p>{{object.description}}</p>
+              <p>{{object.price | currency : 'CAD'}}</p>
+
+
+
+              <br/>
+
+
+
+              <button type="button" class="btn btn-danger">Shop now</button> &nbsp; &nbsp;  <button type="button" class="btn btn-success">Buy Now</button>
+
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>
+
+
