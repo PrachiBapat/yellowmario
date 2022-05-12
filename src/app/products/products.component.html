@@ -1,5 +1,31 @@
 <!-- <p>products works!</p> -->
-<p>{{productList}}</p>
+
+<!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> -->
+
+<div class="banner"></div>
+
+
+<!-- <p>{{productList}}</p> -->
 <!-- <h1>prachi</h1> -->
 <div class="container mt-5 mb-5">
 
@@ -8,9 +34,10 @@
       <div class="col-lg-4" *ngFor="let object of productList">
 
           <div class="typeproduct mt-3 mb-3">
-              <img src="{{object.productPicture}}">
+              <img [src]="object.productPicture">
               <h1>{{object.productTitle}}</h1>
               <p>{{object.description}}</p>
+              <p>{{object.stockAvailability}}</p>
               <p>{{object.price | currency : 'CAD'}}</p>
 
 
@@ -19,7 +46,7 @@
 
 
 
-              <button type="button" class="btn btn-danger">Shop now</button> &nbsp; &nbsp;  <button type="button" class="btn btn-success">Buy Now</button>
+              <button type="button" class="btn btn-danger">Shop now</button> &nbsp; &nbsp;  <button type="button" class="btn btn-success">Add cart</button>
 
 
           </div>
