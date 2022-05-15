@@ -1,10 +1,11 @@
-export interface product{
-  Id : number;
+export interface adminproduct{
+  ID : number;
   productTitle:string;
-  productPicture:string;
+  product_image:string;
   description: string;
   price :number;
   stockAvailability:string;
+  display:string;
 
 
 

@@ -34,11 +34,12 @@
       <div class="col-lg-4" *ngFor="let object of productList">
 
           <div class="typeproduct mt-3 mb-3">
-              <img [src]="object.productPicture">
+              <img [src]="object.product_image">
               <h1>{{object.productTitle}}</h1>
               <p>{{object.description}}</p>
               <p>{{object.stockAvailability}}</p>
-              <p>{{object.price | currency : 'CAD'}}</p>
+              <!-- <p>{{object.price | currency : 'CAD'}}</p> -->
+
 
 
 

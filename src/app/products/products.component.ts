@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{ product } from '../product.interface';
+import{ adminproduct } from '../interface/admin.interface'
 import { ProductService } from '../services/product.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProductService } from '../services/product.service';
 export class ProductsComponent implements OnInit {
 
 
-  productList:product[] =[]
+  productList:adminproduct[] = [] ;
     // {
     // Id : 1,
     // productTitle:"Apple iPhone 11 Pro",
@@ -114,8 +114,9 @@ export class ProductsComponent implements OnInit {
   constructor(private es:ProductService) { }
 
   ngOnInit(): void {
-    this.es.getAllProducts().subscribe( productList => {
-      console.log("product",this.productList);
+    this.es.onlineproducts().subscribe( productList => {
+      // console.log("product",this.productList);
+      console.log(this.productList);
       this.productList = productList;
     })
 
